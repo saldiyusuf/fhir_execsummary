@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <type value="transaction"/>
+    <entry>
+        <fullUrl value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+        <resource>
+            <Organization>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UWEARME2021 - A DIVISION OF HEALTH GIZMOS
+                        CORP </div>
+                </text>
+                <identifier>
+                    <system value="http://fhirfun2021.org/ids"/>
+                    <value value="UWEARME2021"/>
+                </identifier>
+                <name value="UWEARME2021"/>
+                <address>
+                    <line value="2000 WEARABLE DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+                </address>
+            </Organization>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Organization?identifier=http://fhirfun2021.org/ids|UWEARME2021"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+        <resource>
+            <Patient>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> Saldi Malino Id #
+                        saldi.malino </div>
+                </text>
+                <identifier>
+                    <system value="http://mypatientidentifier.com/ids"/>
+                    <value value="saldi.malino"/>
+                </identifier>
+                <name>
+                    <family value="Malino"/>
+                    <given value="Saldi"/>
+                </name>
+                <address>
+                    <line value="Bone Gowa Estate 1945"/>
+                    <city value="Gowa"/>
+                    <state value="South Sulawesi"/>
+                    <country value="Indonesia"/>
+                </address>
+                <managingOrganization>
+                    <reference value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+                </managingOrganization>
+            </Patient>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url
+                value="Patient?identifier=http://mypatientidentifier.com/ids|saldi.malino"
+            />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"/>
+        <resource>
+            <Device>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device saldi.malino
+                    </div>
+                </text>
+                <identifier>
+                    <system value="http://uwearme.com/dev"/>
+                    <value value="saldi.malino"/>
+                </identifier>
+                <expirationDate value="2020-10-10"/>
+                <lotNumber value="22222"/>
+                <modelNumber value="u888800-1"/>
+                <type>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="33894003"/>
+                        <display value="Experimental Device"/>
+                    </coding>
+                </type>
+                <patient>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+                </patient>
+                <owner>
+                    <reference value="urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"/>
+                </owner>
+            </Device>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Device?identifier=http://uwearme.com/dev|saldi.malino"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:9b3055be-bb9f-4fce-b5da-599286eb2841"/>
+        <resource>
+            <Observation>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Measure for Pat #
+                        saldi.malino Respiratory Rate:
+                        18 /min on 2021-08-01T08:00:00Z </div>
+                </text>
+                <identifier>
+                    <system value="http://uwearme.com/measures"/>
+                    <value value="saldi.malino-2021-08-01T08:00:00Z-9279-1"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="9279-1"/>
+                        <display value="Respiratory Rate"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+                </subject>
+                <effectiveDateTime value="2021-08-01T08:00:00Z"/>
+                <valueQuantity>
+                    <value value="18"/>
+                    <unit value="/min"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"/>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:bf551c01-8aa5-4ace-99d4-ae03a5bc89e7"/>
+        <resource>
+            <Observation>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Measure for Pat # 
+                        saldi.malino Systolic BP: 110 mmHg
+                        on 2021-08-01T08:00:00Z </div>
+                </text>
+                <identifier>
+                    <system value="http://uwearme.com/measures"/>
+                    <value value="saldi.malino-2021-08-01T08:00:00Z-8480-6"
+                    />
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8480-6"/>
+                        <display value="Systolic BP"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+                </subject>
+                <effectiveDateTime value="2021-08-01T08:00:00Z"/>
+                <valueQuantity>
+                    <value value="110"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"/>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:54e8f280-8f5c-4d63-a174-29a091ecb06a"/>
+        <resource>
+            <Observation>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Measure for Pat # saldi.malino
+                        Diastolic BP:
+                        80 mmHg on 2021-08-01T08:00:00Z </div>
+                </text>
+                <identifier>
+                    <system value="http://uwearme.com/measures"/>
+                    <value
+                        value="saldi.malino-2021-08-01T08:00:00Z-8462-4"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8462-4"/>
+                        <display value="Diastolic BP"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+                </subject>
+                <effectiveDateTime value="2021-08-01T08:00:00Z"/>
+                <valueQuantity>
+                    <value value="80"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"/>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:55c0f3ad-4a2e-4516-8e2c-3db15ed62941"/>
+        <resource>
+            <Observation>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Measure for Pat #
+                        saldi.malino Heart Rate:
+                        68 /min on 2021-08-01T08:00:00Z </div>
+                </text>
+                <identifier>
+                    <system value="http://uwearme.com/measures"/>
+                    <value value="saldi.malino-2021-08-01T08:00:00Z-8867-4"
+                    />
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8867-4"/>
+                        <display value="Heart Rate"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"/>
+                </subject>
+                <effectiveDateTime value="2021-08-01T08:00:00Z"/>
+                <valueQuantity>
+                    <value value="68"/>
+                    <unit value="/min"/>
+                </valueQuantity>
+                <device>
+                    <reference value="urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"/>
+                </device>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+</Bundle>
